@@ -31,7 +31,7 @@ Yhteensä: 27p
 
 ### JS-moduuli 3
 
-[Linkki JS-moduulin 3 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod3/)
+[Linkki JS-moduulin 3 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod03/)
 
 Tehdyt tehtävät:
 
