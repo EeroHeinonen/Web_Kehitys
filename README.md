@@ -2,9 +2,17 @@
 
 ## Ohjelmisto 2 -ohjelmointitehtävät
 
+### HTML Tehtävät
+
+- Tehtävä 1: Tehty
+
+[Linkki HTML Tehtävään 1 @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/HTML/Assignment%201/)
+
+[Linkki HTML Tehtävän 1 validointi tuloksiin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/HTML/results.html))
+
 ### JS-moduulit 1 ja 2
 
-[Linkki JS-moduulin 1 ja 2 kansioon @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod1_Mod2/)
+[Linkki JS-moduulin 1 ja 2 kansion tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod01_Mod02/)
 
 Tehdyt tehtävät:
 
@@ -21,8 +29,12 @@ Tehdyt tehtävät:
 
 Yhteensä: 27p
 
-### HTML Tehtävät
+### JS-moduuli 3
 
-- Tehtävä 1: Tehty
+[Linkki JS-moduulin 3 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod03/)
 
-[Linkki JS-moduulin 1 ja 2 kansioon @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/HTML/Assignment%201/)
+Tehdyt tehtävät:
+
+- Tehtävä 1: 2p
+
+Yhteensä: 27p
