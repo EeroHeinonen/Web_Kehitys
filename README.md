@@ -25,4 +25,5 @@ Yhteensä: 27p
 
 - Tehtävä 1: Tehty
 
-[Linkki JS-moduulin 1 ja 2 kansioon @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/HTML/Assignment%201/)
+[Linkki HTML Tehtävään 1 @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/HTML/Assignment%201/)
+[Linkki HTML Tehtävän 1 validointi tuloksiin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/HTML/results.html))
