@@ -36,5 +36,11 @@ Yhteensä: 27p
 Tehdyt tehtävät:
 
 - Tehtävä 1: 2p
+- Tehtävä 2: 2p
+- Tehtävä 3: 2p
+- Tehtävä 4: 2p
+- Tehtävä 5: 2p
+- Tehtävä 6: 2p
+- Tehtävä 7: 2p
 
 Yhteensä: 27p
