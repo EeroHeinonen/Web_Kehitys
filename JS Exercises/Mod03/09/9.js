@@ -1,6 +1,6 @@
 "use strict"
 
-function concat(originalNumbers){
+function even(originalNumbers){
 
     let newNumbers = [];
     let originalNumberArray;
@@ -76,23 +76,23 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
     let numbers = document.getElementById("userIn").value;
 
-    console.log()
-
-    if(concat(numbers) == true){
+    if(even(numbers) == true){
 
         alert("The input must be numerical!")
         document.getElementById("newArrayTitle").hidden = true;
         document.getElementById("originalArrayTitle").hidden = true;
+        document.getElementById("newArray").innerHTML = "";
+        document.getElementById("originalArray").innerHTML = "";
 
     }
 
-    else if(concat(numbers).new != ""){
+    else if(even(numbers).new != ""){
 
         document.getElementById("newArrayTitle").hidden = false;
         document.getElementById("originalArrayTitle").hidden = false;
-        document.getElementById("newArray").innerHTML = "New array: [" + concat(numbers).new + "]";
-        console.log("Original Array: [" + concat(numbers).original + "]")
-        console.log("New Array: [" + concat(numbers).new + "]")
+        document.getElementById("newArray").innerHTML = "New array: [" + even(numbers).new + "]";
+        console.log("Original Array: [" + even(numbers).original + "]")
+        console.log("New Array: [" + even(numbers).new + "]")
 
     }
 
@@ -101,9 +101,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
         document.getElementById("newArray").innerHTML = "No even numbers found!";
         document.getElementById("newArrayTitle").hidden = true;
 
-        if(concat(numbers).original != undefined){
+        if(even(numbers).original != undefined){
             
-            console.log("Original Array: [" + concat(numbers).original + "]")
+            console.log("Original Array: [" + even(numbers).original + "]")
 
         }
 
