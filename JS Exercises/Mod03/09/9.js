@@ -23,31 +23,25 @@ function even(originalNumbers){
 
         };
 
-        document.getElementById("originalArray").innerHTML = "Original array: [" + originalNumberArray + "]";
-        document.getElementById("originalArrayTitle").hidden = false;
-
         for (const num of originalNumberArray){
 
             let li = document.createElement("li");
-            let tn = document.createTextNode(num);
-            li.appendChild(tn);
+            li.appendChild(document.createTextNode(num));
             document.getElementById("numbers").appendChild(li);
 
-        };
-        
-        for (const number of originalNumberArray){
+            if(parseInt(num) % 2 === 0){
 
-            if(parseInt(number) % 2 === 0){
-
-                newNumbers.push(number);
-                let li = document.createElement("li");
-                let evenNumber = document.createTextNode(number);
-                li.appendChild(evenNumber);
-                document.getElementById("newNumbers").appendChild(li);
+                newNumbers.push(num);
+                let li2 = document.createElement("li");
+                li2.appendChild(document.createTextNode(num));
+                document.getElementById("newNumbers").appendChild(li2);
 
             };
 
         };
+
+        document.getElementById("originalArray").innerHTML = "Original array: [" + originalNumberArray + "]";
+        document.getElementById("originalArrayTitle").hidden = false;
 
     }
 
@@ -76,7 +70,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
     let numbers = document.getElementById("userIn").value;
 
-    if(even(numbers) == true){
+    let result = even(numbers);
+
+    if(result == true){
 
         alert("The input must be numerical!")
         document.getElementById("newArrayTitle").hidden = true;
@@ -86,13 +82,13 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
     }
 
-    else if(even(numbers).new != ""){
+    else if(result.new != ""){
 
         document.getElementById("newArrayTitle").hidden = false;
         document.getElementById("originalArrayTitle").hidden = false;
-        document.getElementById("newArray").innerHTML = "New array: [" + even(numbers).new + "]";
-        console.log("Original Array: [" + even(numbers).original + "]")
-        console.log("New Array: [" + even(numbers).new + "]")
+        document.getElementById("newArray").innerHTML = "New array: [" + result.new + "]";
+        console.log("Original Array: [" + result.original + "]")
+        console.log("New Array: [" + result.new + "]")
 
     }
 
@@ -101,9 +97,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
         document.getElementById("newArray").innerHTML = "No even numbers found!";
         document.getElementById("newArrayTitle").hidden = true;
 
-        if(even(numbers).original != undefined){
+        if(result.original != undefined){
             
-            console.log("Original Array: [" + even(numbers).original + "]")
+            console.log("Original Array: [" + result.original + "]")
 
         }
 
