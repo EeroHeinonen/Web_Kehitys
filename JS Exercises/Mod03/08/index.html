@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add even numbers out of the given numbers to a new array</h1>
+    <div>  
+        <form>
+            <label for="userIn" style="font-size: 25px;">Input the original numbers separated with a comma:</label>
+            <div style="padding-top: 15px; padding-bottom: 15px;">
+                <input type="text" id="userIn" style="min-width: 200px; height: 30px; font-size: 25px; field-sizing: content;">
+                <input type="submit" style="width: 100px; height: 35px; font-size: 25px;" id="submit">
+            </div>
+        </form>
+
+        <h2 id="originalArrayTitle" hidden>Original numbers:</h2>
+        <ul style="font-size: 25px; "id="numbers"></ul>
+        <p style="font-size: 25px; "id="originalArray"></p>
+
+        <h2 id="newArrayTitle" hidden>Even numbers:</h2>
+        <ul style="font-size: 25px;" id="newNumbers"></ul>
+        <p style="font-size: 25px;" id="newArray"></p>
+    </div>
+    <script src="9.js" defer></script>
+</body>
+</html>

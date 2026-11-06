@@ -1,29 +1,33 @@
 "use strict"
 
-let diceSize = prompt("How many sides does the dice have?")
+let diceSides = parseInt(prompt("How many sides does the dice have?"))
 
-let i = 0;
+let counter = 0;
 let dice;
 
 function rollDice(diceSize){
     
     document.getElementById("rolls").innerHTML = ""
+    counter = 0;
+    dice = 0;
 
-    for(let i = 0; dice != diceSize; i++){
+    do{
 
         dice = Math.floor(Math.random() * diceSize) + 1;
-        var li = document.createElement("li");
-        var diceRoll = document.createTextNode(dice);
+        let li = document.createElement("li");
+        let diceRoll = document.createTextNode(dice);
         li.appendChild(diceRoll);
-        li.setAttribute("id", "roll")
         document.getElementById("rolls").appendChild(li);
 
-    }
+        counter += 1
 
-    dice = 0;
+    }
+    while(dice != diceSize)
+
+    document.getElementById("diceValue").innerText = `A ${diceSize} roll was achieved in ${counter} rolls!`;
+
+    return dice
 
 }
 
-document.getElementById("diceValue").innerText = `A ${diceSize} roll was achieved in ${i} rolls!`;
-
-document.getElementById("dice").addEventListener("click", rollDice());
+document.getElementById("dice").addEventListener("click", () => rollDice(diceSides));
