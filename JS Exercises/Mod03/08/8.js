@@ -1,11 +1,11 @@
 "use strict"
 
-function arrayAdd(names){
+function concat(names){
 
     let originalArray;
     let fullString = "";
 
-    document.getElementById("names").innerHTML = "";
+    document.getElementsByClassName("string").innerHTML = "";
     document.getElementsByClassName("array").innerHTML = "";
 
     if(names.replace(/\s/g, "") != ""){
@@ -22,21 +22,23 @@ function arrayAdd(names){
 
         for (let i = 0; i < originalArray.length; i++){
 
-            fullString += originalArray[i];
+            fullString += originalArray[i].toString();
 
         };
 
-        document.getElementById("string").innerHTML = fullString;
-        document.getElementById("array").innerHTML = "[" + originalArray + "]";
-        document.getElementById("arrayTitle").hidden = false;
+        return{
 
+            string: fullString,
+            original: originalArray
+
+        };
+a
     }
 
     else{
+        
+        return true;
 
-        document.getElementById("string").innerHTML = "User input was empty!";
-        document.getElementById("array").innerHTML = "";
-        document.getElementById("arrayTitle").hidden = true;
     }
 
 };
@@ -45,8 +47,31 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
     event.preventDefault();
 
-    arrayAdd(document.getElementById("userIn").value);
+    console.clear();
+
+    let result = concat(document.getElementById("userIn").value);
 
     document.getElementById("userIn").value = "";
+
+    if(result == true) {
+
+        document.getElementById("stringTitle").hidden = true;
+        document.getElementById("string").innerHTML = "User input was empty!";
+        document.getElementById("array").innerHTML = "";
+        document.getElementById("arrayTitle").hidden = true;
+
+    }
+
+    else{
+
+        document.getElementById("stringTitle").hidden = false;
+        document.getElementById("string").innerHTML = result.string;
+        document.getElementById("array").innerHTML = `[${result.original}]`;
+        document.getElementById("arrayTitle").hidden = false;
+
+        console.log(`String: ${result.string}`);
+        console.log(`Array: [${result.original}]`);
+
+    };
 
 });
