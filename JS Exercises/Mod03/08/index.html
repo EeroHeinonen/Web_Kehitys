@@ -6,12 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Roll the dice until the value is the highest possible</h1>
-    <div>
-        <button style="padding: 15px;" id="dice">Roll the dice</button>
-        <p id="diceValue"></p>
-        <ul id="rolls"></ul>
+    <h1>Add all the given names into an array</h1>
+    <div>  
+        <form>
+            <label for="userIn" style="font-size: 25px;">Input the names separated with a comma:</label>
+            <div style="padding-top: 15px; padding-bottom: 15px;">
+                <input type="text" id="userIn" style="min-width: 200px; height: 30px; font-size: 25px; field-sizing: content;">
+                <input type="submit" style="width: 100px; height: 35px; font-size: 25px;" id="submit">
+            </div>
+        </form>
+
+        <h2 id="arrayTitle" hidden>Names in the array</h2>
+        <ul style="font-size: 25px; "id="names"></ul>
+        <p style="font-size: 25px; "id="string"></p>
+        <p style="font-size: 25px; "id="array"></p>
+
     </div>
-    <script src="8.js"></script>
+    <script src="8.js" defer></script>
 </body>
 </html>

@@ -1,33 +1,52 @@
 "use strict"
 
-let diceSides = parseInt(prompt("How many sides does the dice have?"))
+function arrayAdd(names){
 
-let counter = 0;
-let dice;
+    let originalArray;
+    let fullString = "";
 
-function rollDice(diceSize){
-    
-    document.getElementById("rolls").innerHTML = ""
-    counter = 0;
-    dice = 0;
+    document.getElementById("names").innerHTML = "";
+    document.getElementsByClassName("array").innerHTML = "";
 
-    do{
+    if(names.replace(/\s/g, "") != ""){
 
-        dice = Math.floor(Math.random() * diceSize) + 1;
-        let li = document.createElement("li");
-        let diceRoll = document.createTextNode(dice);
-        li.appendChild(diceRoll);
-        document.getElementById("rolls").appendChild(li);
+        originalArray = names.replace(/\s/g, "").split(/,/)
 
-        counter += 1
+        for (const name of originalArray){
+
+            let li = document.createElement("li");
+            li.appendChild(document.createTextNode(name));
+            document.getElementById("array").appendChild(li);
+
+        }
+
+        for (let i = 0; i < originalArray.length; i++){
+
+            fullString += originalArray[i];
+
+        };
+
+        document.getElementById("string").innerHTML = fullString;
+        document.getElementById("array").innerHTML = "[" + originalArray + "]";
+        document.getElementById("arrayTitle").hidden = false;
 
     }
-    while(dice != diceSize)
 
-    document.getElementById("diceValue").innerText = `A ${diceSize} roll was achieved in ${counter} rolls!`;
+    else{
 
-    return dice
+        document.getElementById("string").innerHTML = "User input was empty!";
+        document.getElementById("array").innerHTML = "";
+        document.getElementById("arrayTitle").hidden = true;
+    }
 
-}
+};
 
-document.getElementById("dice").addEventListener("click", () => concat());
+document.querySelector("form").addEventListener("submit", (event) => {
+
+    event.preventDefault();
+
+    arrayAdd(document.getElementById("userIn").value);
+
+    document.getElementById("userIn").value = "";
+
+});
