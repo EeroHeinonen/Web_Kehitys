@@ -12,7 +12,7 @@
 
 ### JS-moduulit 1 ja 2
 
-[Linkki JS-moduulin 1 ja 2 kansion tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod01_Mod02/)
+[Linkki JS-moduulien 1 ja 2 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod01_Mod02/)
 
 Tehdyt tehtävät:
 
@@ -42,6 +42,7 @@ Tehdyt tehtävät:
 - Tehtävä 5: 2p
 - Tehtävä 6: 2p
 - Tehtävä 7: 2p
+- Tehtävä 8: 2p
 - Tehtävä 9: 3p
 
-Yhteensä: 17p
+Yhteensä: 19p
