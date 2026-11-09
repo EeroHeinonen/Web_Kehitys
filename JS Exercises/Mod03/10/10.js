@@ -5,6 +5,7 @@ let votersArray = [];
 function setCand(){
 
     votersArray = [];
+    document.getElementById("winner").innerHTML = "";
 
     let candNum = prompt("How many candidates are there?");
 
@@ -21,6 +22,8 @@ function setCand(){
 
 function setTable(){
 
+    document.getElementById("winner").innerHTML = "";
+
     document.getElementById("voterArray").innerHTML = "";
 
     for (let j = 0; j < votersArray.length; j++){
@@ -36,11 +39,25 @@ function setTable(){
 
     };
 
+    for (const cand of votersArray){
+
+        if(cand.votes > 0){
+
+            let winner = votersArray.toSorted((a, b) => {
+
+                return b.votes - a.votes;
+
+            });
+
+            document.getElementById("winner").innerHTML = `The winner of the vote is: ${(winner[0].name.charAt(0).toUpperCase() + winner[0].name.slice(1))}!`;
+
+        };
+
+    };
+
 };
 
 function checkVotes(){
-
-    console.log(votersArray);
     
     if(votersArray == ""){
 
@@ -56,27 +73,38 @@ function checkVotes(){
 
         };
 
-        let voterNum = prompt("How many voters are there?")
+        let voterNum;
 
-        for (let i = 0; i < voterNum; i++){
+        do{
 
-            let userIn = prompt("Voter " + (i + 1) + ", enter a candidate number to vote for:");
-            if(userIn === ""){}
+            voterNum = prompt("How many voters are there?")
 
-            else if(votersArray[userIn - 1] !== undefined){
+            if(!isNaN(voterNum) || voterNum !== ""){
 
-                votersArray[userIn - 1].votes += 1;
+                for (let i = 0; i < voterNum; i++){
 
-            }
-            
-            else{
+                    let userIn = prompt("Voter " + (i + 1) + ", enter a candidate number to vote for:");
+                    if(userIn === ""){}
 
-                alert("The voter index was not found on available voters!");
-                i--;
+                    else if(votersArray[userIn - 1] !== undefined){
+
+                        votersArray[userIn - 1].votes += 1;
+
+                    }
+                    
+                    else{
+
+                        alert("The voter index was not found on available voters!");
+                        i--;
+
+                    };
+
+                };
 
             };
 
-        };
+        }
+        while(isNaN(voterNum) || voterNum === "");
 
         setTable();
 
