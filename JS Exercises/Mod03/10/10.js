@@ -9,10 +9,27 @@ function setCand(){
 
     let candNum = prompt("How many candidates are there?");
 
+    if (candNum === null || isNaN(candNum) || candNum.trim() === ""){
+
+        alert("Number of candidates has to be numerical and can not be empty!");
+        return;
+
+    };
+
     for (let h = 0; h < candNum; h++){
 
         let candName = prompt(`Input the name of candidate no ${(h+1)}.`);
-        votersArray.push({name: candName.toLowerCase(), votes: 0});
+        if( candName === null || candName.trim() === ""){
+
+            alert("The candidate name cannot be empty!")
+            h--
+
+        }
+        else{
+
+            votersArray.push({name: candName.toLowerCase(), votes: 0});
+
+        }
       
     };
 
@@ -39,19 +56,15 @@ function setTable(){
 
     };
 
-    for (const cand of votersArray){
+    if(votersArray.some(cand => cand.votes > 0)){
 
-        if(cand.votes > 0){
+        let winner = votersArray.toSorted((a, b) => {
 
-            let winner = votersArray.toSorted((a, b) => {
+            return b.votes - a.votes;
 
-                return b.votes - a.votes;
+        });
 
-            });
-
-            document.getElementById("winner").innerHTML = `The winner of the vote is: ${(winner[0].name.charAt(0).toUpperCase() + winner[0].name.slice(1))}!`;
-
-        };
+        document.getElementById("winner").innerHTML = `The winner of the vote is: ${(winner[0].name.charAt(0).toUpperCase() + winner[0].name.slice(1))}!`;
 
     };
 
@@ -59,7 +72,7 @@ function setTable(){
 
 function checkVotes(){
     
-    if(votersArray == ""){
+    if(votersArray.length === 0){
 
         alert("You need to set the available candidates in order to cast votes!")
 
@@ -75,36 +88,52 @@ function checkVotes(){
 
         let voterNum;
 
-        do{
+        while (true) {
 
-            voterNum = prompt("How many voters are there?")
+            voterNum = prompt("How many voters are there?");
+            
+            if (voterNum === null){
 
-            if(!isNaN(voterNum) || voterNum !== ""){
-
-                for (let i = 0; i < voterNum; i++){
-
-                    let userIn = prompt("Voter " + (i + 1) + ", enter a candidate number to vote for:");
-                    if(userIn === ""){}
-
-                    else if(votersArray[userIn - 1] !== undefined){
-
-                        votersArray[userIn - 1].votes += 1;
-
-                    }
-                    
-                    else{
-
-                        alert("The voter index was not found on available voters!");
-                        i--;
-
-                    };
-
-                };
+                return;
 
             };
 
-        }
-        while(isNaN(voterNum) || voterNum === "");
+            if (voterNum.trim() !== "" && !isNaN(voterNum) && parseInt(voterNum) >= 0){
+              
+                voterNum = parseInt(voterNum);
+                break;
+
+            };
+
+            alert("Please enter a valid number of voters.");
+
+        };
+
+        for (let i = 0; i < voterNum; i++){
+
+            let userIn = prompt("Voter " + (i + 1) + ", enter a candidate number to vote for:");
+            if(userIn === null){
+              
+                return;
+
+            }
+
+            else if(userIn === ""){}
+
+            else if(votersArray[userIn - 1] !== undefined){
+
+                votersArray[userIn - 1].votes += 1;
+
+            }
+            
+            else{
+
+                alert("The candidate index was not found on available voters!");
+                i--;
+
+            };
+
+        };
 
         setTable();
 
