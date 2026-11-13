@@ -47,3 +47,23 @@ Tehdyt tehtävät:
 - Tehtävä 10: 8p
 
 Yhteensä: 27p
+
+### JS-moduuli 4
+
+[Linkki JS-moduulin 4 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod04/)
+
+Tehdyt tehtävät:
+
+- Tehtävä 1: 2p
+- Tehtävä 2: 2p
+- Tehtävä 3: 2p
+- Tehtävä 4: 2p
+- Tehtävä 5: 5p
+- Tehtävä 6: 1p
+- Tehtävä 7: 2p
+- Tehtävä 8: 4p
+- Tehtävä 9: 4p
+- Tehtävä 10: 2p
+- Tehtävä 11: 6p
+
+Yhteensä: 27p
