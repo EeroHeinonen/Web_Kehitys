@@ -3,18 +3,6 @@ import re
 from flask import Flask, request, render_template, Response
 app = Flask(__name__)
 
-# data = {
-    
-#     "hello": ["hei", "moi", "terve"],
-#     "hi": ["hei", "moi", "terve"],
-#     "computer": "tietokone",
-#     "school": "koulu",
-    
-# }
-
-# with open('translations.json', 'w') as f:
-#     fileData = json.dump(data, f)
-
 @app.route('/index/translate/', methods=['POST', 'GET'])
 def translate():
 
