@@ -66,4 +66,4 @@ Tehdyt tehtävät:
 - Tehtävä 10: 2p
 - Tehtävä 11: 6p
 
-Yhteensä: 27p
+Yhteensä: 32p
