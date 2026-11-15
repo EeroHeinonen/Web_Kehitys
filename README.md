@@ -82,7 +82,7 @@ Yhteensä: 20p
 
 ### Moduuli 6
 
-[Linkki Moduulin 6 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod06/)
+[Linkki Moduulin 6 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod05/)
 
 Tehdyt tehtävät:
 
