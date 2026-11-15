@@ -67,3 +67,15 @@ Tehdyt tehtävät:
 - Tehtävä 11: 6p
 
 Yhteensä: 32p
+
+### JS-moduuli 4
+
+[Linkki JS-moduulin5 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/Flask/)
+
+Tehdyt tehtävät:
+
+- Tehtävä 1: 4p
+- Tehtävä 2: 10p
+- Tehtävä 3: 6p
+
+Yhteensä: 20p
