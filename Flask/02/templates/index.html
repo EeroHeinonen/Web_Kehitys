@@ -5,29 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="font-size: 30px; padding: 20px;">
 
-    <form style="font-size: 30px;" action="{{ url_for("addWord")}}" method="post">
-        <div style="padding-bottom: 20px;">
-            <label for="dictItem">Word:</label>
+    <form action="{{ url_for("addWord")}}" method="post">
+        <div>
             <input style="font-size: 25px;" type="text" id="dictItem" name="dictItem" placeholder="Word:Translation">
             <button style="font-size: 25px;" type="submit">Add word</button>
-            <p>{{added}}</p>
         </div>
     </form>
-    <form style="font-size: 30px;" action="{{ url_for("deleteWord")}}" method="post">
-        <label for="dictDelete">Word:</label>
-        <input style="font-size: 25px;" type="text" id="dictDelete" name="dictDelete" placeholder="Word">
-        <button style="font-size: 25px;" type="submit" name="delete">Delete word</button>
-    </form>
-
-    <form style="font-size: 30px;" action="{{ url_for("translate")}}" method="post">
+    <form action="{{ url_for("deleteWord")}}" method="post">
         <div>
-            <label for="word">Word:</label>
-            <input style="font-size: 25px;" type="text" id="word" name="word">
-            <button style="font-size: 25px;" type="submit">Translate</button>
-            <p>{{result}}</p>
+            <input style="font-size: 25px;" type="text" id="dictDelete" name="dictDelete" placeholder="Word">
+            <button style="font-size: 25px;" type="submit" name="delete">Delete word</button>
+
         </div>
     </form>
+    <form action="{{ url_for("translate")}}" method="post">
+        <div>
+            <input style="font-size: 25px;" type="text" id="word" name="word" placeholder="Word">
+            <button style="font-size: 25px;" type="submit">Translate</button>
+        </div>
+    </form>
+    <form style="padding-top: 20px;"action="{{ url_for("displayJSON")}}" method="post">
+        <div>
+            <button style="font-size: 25px;" type="submit">Display Words</button>
+        </div>
+    </form>
+    <div>
+        {% if added %}
+            <p>{{added}}</p>
+        {% endif %}
+        {% if deleted %}
+            <p>{{deleted}}</p>
+        {% endif %}
+        {% if result %}
+            <p>{{result}}</p>
+        {% endif %}
+        {% if jsonList %}
+            <ul>
+            {% for key in jsonList %}
+                <li>{{ key.title() }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
 </body>
 </html>

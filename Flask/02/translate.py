@@ -1,7 +1,11 @@
 import json
 import re
+import os
 from flask import Flask, request, render_template, Response
 app = Flask(__name__)
+
+baseDir = os.path.dirname(os.path.abspath(__file__))
+fileLocation = os.path.join(baseDir, "translations.json")
 
 @app.route('/index/translate/', methods=['POST', 'GET'])
 def translate():
@@ -12,7 +16,7 @@ def translate():
 
     if request.method == "POST":
 
-        with open("translations.json", "r", encoding='utf-8') as f:
+        with open(fileLocation, "r", encoding='utf-8') as f:
             fileData = json.load(f)
         
 
@@ -36,7 +40,14 @@ def translate():
 
             else:
                     
-                result = "The input value was not found in the dictionary."
+                if word == "":
+
+                    result = "Please enter a non empty value!"
+
+                else:
+
+                    result = f"{word.title()} was not found in dictionary!"
+
 
         return render_template(
 
@@ -58,10 +69,18 @@ def addWord():
 
         if len(dictItem) != 2 or not dictItem[0].strip() or not dictItem[1].strip():
 
+            if userIn == "":
+
+                added = "Please enter a non empty value!"
+
+            else:
+
+                added='Invalid format. Please enter value as "Word:Translation".'
+
             return render_template(
 
                 "index.html",
-                added="Invalid format. Please enter as 'english: finnish'."
+                added=added
 
             )
 
@@ -70,28 +89,28 @@ def addWord():
 
             if v.strip():
 
-                raw_values = v.strip()
+                rawValues = v.strip()
 
-        if len(raw_values) > 1:
+        if len(rawValues) > 1:
 
-            value = raw_values
+            value = rawValues
         
         else:
             
-            value = raw_values[0]
+            value = rawValues[0]
 
-        with open("translations.json", "r", encoding='utf-8') as f:
+        with open(fileLocation, "r", encoding='utf-8') as f:
             current_data = json.load(f)
 
         current_data[key] = value
 
-        with open("translations.json", "w", encoding='utf-8') as f:
+        with open(fileLocation, "w", encoding='utf-8') as f:
             json.dump(current_data, f)
 
         return render_template(
             
             "index.html", 
-            added="Item added successfully"
+            added=f"{key.title()} added successfully"
             
         )
 
@@ -104,22 +123,52 @@ def deleteWord():
 
         userIn = request.form.get("dictDelete", "").strip().lower()
 
-        with open("translations.json", "r", encoding='utf-8') as f:
+        with open(fileLocation, "r", encoding='utf-8') as f:
             data = json.load(f)
 
         for x, y in data.items():
             if userIn == x:
-                print(x)
+                deleted = f"{userIn.title()} deleted successfully!"
                 del data[userIn]
                 break
+            else:
+                if userIn == "":
 
-        with open("translations.json", "w", encoding='utf-8') as f:
+                    deleted = "Please enter a non empty value!"
+
+                else:
+
+                    deleted = f"{userIn.title()} was not found in dictionary!"
+
+
+        with open(fileLocation, "w", encoding='utf-8') as f:
             json.dump(data, f)
 
         return render_template(
         
             "index.html", 
-            added="Item deleted successfully!"
+            deleted = deleted
+        
+        )
+
+    return render_template(
+    
+        "index.html"
+    
+    )
+
+@app.route('/index/display/', methods=['POST', 'GET'])
+def displayJSON():
+
+    if request.method == "POST":
+
+        with open(fileLocation, "r", encoding='utf-8') as f:
+                    data = json.load(f)
+
+        return render_template(
+                
+            "index.html", 
+            jsonList= data
         
         )
 
