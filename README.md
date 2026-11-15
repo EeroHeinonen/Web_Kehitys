@@ -68,7 +68,7 @@ Tehdyt tehtävät:
 
 Yhteensä: 32p
 
-### Moduuli 5
+### Moduuli 5 (Flask)
 
 [Linkki Moduulin 5 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/Flask/)
 
@@ -77,5 +77,20 @@ Tehdyt tehtävät:
 - Tehtävä 1: 4p
 - Tehtävä 2: 10p
 - Tehtävä 3: 6p
+
+Yhteensä: 20p
+
+### Moduuli 6
+
+[Linkki Moduulin 6 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod06/)
+
+Tehdyt tehtävät:
+
+- Tehtävä 1: 2p
+- Tehtävä 2: 3p
+- Tehtävä 3: 7p
+- Tehtävä 4: 2p
+- Tehtävä 5: 2p
+- Tehtävä 6: 4p
 
 Yhteensä: 20p
