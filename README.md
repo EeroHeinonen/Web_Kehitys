@@ -10,9 +10,9 @@
 
 [Linkki HTML Tehtävän 1 validointi tuloksiin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/HTML/results.html))
 
-### JS-moduulit 1 ja 2
+### Moduulit 1 ja 2
 
-[Linkki JS-moduulien 1 ja 2 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod01_Mod02/)
+[Linkki Moduulien 1 ja 2 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod01_Mod02/)
 
 Tehdyt tehtävät:
 
@@ -29,9 +29,9 @@ Tehdyt tehtävät:
 
 Yhteensä: 27p
 
-### JS-moduuli 3
+### Moduuli 3
 
-[Linkki JS-moduulin 3 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod03/)
+[Linkki Moduulin 3 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod03/)
 
 Tehdyt tehtävät:
 
@@ -48,9 +48,9 @@ Tehdyt tehtävät:
 
 Yhteensä: 27p
 
-### JS-moduuli 4
+### Moduuli 4
 
-[Linkki JS-moduulin 4 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod04/)
+[Linkki Moduulin 4 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod04/)
 
 Tehdyt tehtävät:
 
@@ -67,3 +67,30 @@ Tehdyt tehtävät:
 - Tehtävä 11: 6p
 
 Yhteensä: 32p
+
+### Moduuli 5 (Flask)
+
+[Linkki Moduulin 5 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/Flask/)
+
+Tehdyt tehtävät:
+
+- Tehtävä 1: 4p
+- Tehtävä 2: 10p
+- Tehtävä 3: 6p
+
+Yhteensä: 20p
+
+### Moduuli 6
+
+[Linkki Moduulin 6 tehtäviin @ users.metropolia.fi](https://users.metropolia.fi/~eeromh/Web%20Kehitys/JS%20Exercises/Mod06/)
+
+Tehdyt tehtävät:
+
+- Tehtävä 1: 2p
+- Tehtävä 2: 3p
+- Tehtävä 3: 7p
+- Tehtävä 4: 2p
+- Tehtävä 5: 2p
+- Tehtävä 6: 4p
+
+Yhteensä: 20p
